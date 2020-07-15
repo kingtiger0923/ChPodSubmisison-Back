@@ -1,0 +1,21 @@
+{
+  "name": "chpod",
+  "version": "1.0.0",
+  "description": "Chinese Pod Lesson Submitting System",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "mongose": "0.0.2-security",
+    "nodemon": "^2.0.4"
+  }
+}
