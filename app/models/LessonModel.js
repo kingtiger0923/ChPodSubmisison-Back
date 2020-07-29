@@ -7,13 +7,21 @@ const LessonSchema = new Schema({
     type: String,
     unique: true
   },
+  isUploadingFtp: Boolean,
+  uploadingFile: String,
+  uploadingPercentage: Number,
   title: String,
   complete: Number,
   details: {
+      globalImages: [{
+        fileName: String,
+        isInFtp: Number
+      }],
       audioFiles: [{
         fileName: String,
         received: Boolean,
         duration: Number,
+        isInFtp: Number,
         imageCount: Number,
         imageFiles: [{
           fileName: String, //Without Extension
@@ -23,7 +31,10 @@ const LessonSchema = new Schema({
           "sp": Boolean,
           "tl": Boolean,
           "sl": Boolean,
-          "bg": Boolean
+          isInFtp_tp: Number,
+          isInFtp_sp: Number,
+          isInFtp_tl: Number,
+          isInFtp_sl: Number
         }]
       }],
   }
